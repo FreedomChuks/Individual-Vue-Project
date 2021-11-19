@@ -102,9 +102,9 @@
                             <h6>Available: {{lesson.availablespace - cartCount(lesson)}}</h6>
                             <h6>Price: £{{lesson.price}}</h6>
                             <h6>Rating: <span v-bind:class="lesson.rating" id="star"></span></h6>
-                            <button v-on:click="addToCart(lesson)" v-if="canAddToCart(lesson)" class="btn btn-primary">Add to Cart</button>
+                            <button v-on:click="addToCart(lesson)" v-if="canAddToCart(lesson)" class="add_to_card-btn btn">Add to Cart</button>
                             <!-- disable cart -->
-                            <button class="btn btn-primary" v-else="lesson.availablespace === cartCount(lesson.id)" v-bind:disabled="!canAddToCart(lesson)">Add to Cart</button>
+                            <button class="btn add_to_card-btn" v-else="lesson.availablespace === cartCount(lesson.id)" v-bind:disabled="!canAddToCart(lesson)">Add to Cart</button>
                             <!-- End of disable cart -->
                         </div>
                     </div>
@@ -128,7 +128,7 @@
                             <h6>Subject: {{lesson.subject}}</h6>
                             <h6>Location: {{lesson.location}}</h6>
                             <h6>Price: £{{lesson.price}}</h6>
-                            <button v-on:click="removeFromCart(lesson, cart)" class="btn btn-primary">Remove from Cart</button>
+                            <button v-on:click="removeFromCart(lesson, cart)" class="btn add_to_card-btn">Remove from Cart</button>
                         </div>
                     </div>
                 </div>
@@ -145,7 +145,7 @@
                 </div>
                 <input style="margin-bottom: 50px;" v-on:click="submitForm(user)" v-if="user.name == '' || user.number == '' " class="btn btn-primary" type="submit" value="Place Order" hidden>
                 <p v-else-if="user.name == parseInt(user.name) " class="bg-danger"> Please input a valid name</p>
-                <input style="margin-bottom: 50px;" v-on:click="submitForm(user)" v-else class="btn btn-primary" type="submit" value="Place Order"> 
+                <input style="margin-bottom: 50px;" v-on:click="submitForm(user)" v-else class="btn add_to_card-btn" type="submit" value="Place Order"> 
               </div>
             </form>
             <!-- End of checkout UI -->

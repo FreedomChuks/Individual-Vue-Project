@@ -12,6 +12,21 @@
     font-family: Product-Sans;
 }
 
+.add_to_card-btn{
+	margin-right: 35px;
+    padding: 10px 15px;
+    background-color: #FFBBAB;
+    color: #A54C38;
+    font-family: Product-Sans;
+}
+
+.add_to_card-btn:hover{
+    background-color: #FFD3C8;
+	border: 2px solid #4A0102;
+    color: #4A0100;
+	outline: none;
+}
+
 .cart-button:hover{
     background-color: #FFD3C8;
 	border: 2px solid #4A0102;
