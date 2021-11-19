@@ -73,10 +73,10 @@ let lessons = [
     },
     {
         id: 9,
-        subject: "Backend Development",
+        subject: "Learn Javascript",
         location: "Chelsea",
         price : 950,
-        image: "images/web.jpg",
+        image: "images/javascript.png",
         availablespace: 5,
         rating: 'fa fa-star'
     },
